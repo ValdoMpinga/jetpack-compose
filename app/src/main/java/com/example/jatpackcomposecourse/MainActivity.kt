@@ -18,23 +18,8 @@ class MainActivity : ComponentActivity()
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        setContent {   
-            Greeting(name = "James Guevara")
+        setContent {
+            Navigation()
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String)
-{
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview()
-{
-    JatpackComposeCourseTheme {
-        Greeting("Awesome")
     }
 }
