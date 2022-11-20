@@ -11,6 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.jatpackcomposecourse.ui.theme.HomeScreen
 import com.example.jatpackcomposecourse.ui.theme.JatpackComposeCourseTheme
 
 class MainActivity : ComponentActivity()
@@ -18,23 +19,10 @@ class MainActivity : ComponentActivity()
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        setContent {   
-            Greeting(name = "James Guevara")
+        setContent {
+            JatpackComposeCourseTheme {
+                HomeScreen()
+            }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String)
-{
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview()
-{
-    JatpackComposeCourseTheme {
-        Greeting("Awesome")
     }
 }
